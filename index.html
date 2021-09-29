@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="JS/cesar.js"></script>
+    <script src="/JS/viggenere.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#cesar").hide();
+            $("#viggenere").hide();
+        });
+    $(document).ready(function(){
+        $("#sv").click(function(){
+        $("#viggenere").show();
+        $("#cesar").hide();
+    });
+    $("#sc").click(function(){
+        $("#cesar").show();
+        $("#viggenere").hide();
+      });
+    });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Cifrado</title>
+</head>
+<body class="p-3 mb-2 bg-secondary text-dark">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-3">
+                <button id="sc" class="btn btn-outline-info">Cifrado cesar</button>
+            </div>
+            <div class="col-5">    
+                <button id="sv" class="btn btn-outline-info">Cifrado viggenere</button>
+            </div>    
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h1>Ciframiento de cesar y viggenere</h1>
+    </div>
+    <div class="conteiner" id="cesar">
+        <div class="container">
+            <h2>Cifrado de cesar</h2>
+            <br>
+            <table class="table table-success">
+                    <tr class="row">
+                        <td class="col">Introduce una cadena</td>
+                        <td class="col"><input id="cadena" class="form-control"></input></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col">Introduce el desplazamiento del cifrado</td>
+                        <td class="col"><input id="desp" class="form-control"></input></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col"><input type="button" class="btn btn-outline-info" value="Cifrar" onclick="cifrar()"></td>
+                        <td class="col"><input type="button" class="btn btn-outline-info" value="Descifrar" onclick="descifrar()"></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col">Resultado</td>
+                        <td class="col"><textarea id="resultado" class="form-control"></textarea></td>
+                    </tr>
+            </table>
+        </div>
+    </div>    
+    <div class="container" id="viggenere">
+        <h2>Cifrado de viggenere</h2>
+        <br>
+            <table class="table table-success">
+                <tr class="row">
+                    <td class="col">Introduce una cadena</td>
+                    <td class="col"><input id="mess" class="form-control"></input></td>
+                </tr>
+                <tr class="row">
+                    <td class="col">Introduce la llave para el cifrado</td>
+                    <td class="col"><input id="llave" class="form-control"></input></td>
+                </tr>
+                <tr class="row"> 
+                    <td class="col"><input type="button" class="btn btn-outline-info" value="Cifrar" id="ci"></td>
+                    <td class="col"><input type="button" class="btn btn-outline-info" value="Descifrar" id="de"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col">Resultado</td>
+                    <td class="col"><textarea id="rs" class="form-control"></textarea></td>
+                </tr>
+            </table>
+    </div>
+</body>
+<br>
+<br>
+<footer class="container">
+    <h5>Horteales Morales Antony 5IV8</h5>
+</footer>
+</html>
